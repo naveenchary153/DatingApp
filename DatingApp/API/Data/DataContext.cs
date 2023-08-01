@@ -1,0 +1,17 @@
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+using API.Entities;
+using Microsoft.EntityFrameworkCore;
+
+namespace API.Data
+{
+    public class DataContext : DbContext
+    {
+        public DataContext(DbContextOptions options) : base(options)
+        {
+        }
+
+        public  DbSet<AppUser> Users { get; set; }
+         
+    }
+}
